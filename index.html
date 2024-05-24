@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Streak APP</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="top-bar-container">
+            <div class="top-bar"></div>
+        </div>
+        
+        <div class="bottom-bar">
+            <span>
+                <button id="show-form-button"><ion-icon name="add-circle-outline"></ion-icon></button>
+                <p>Activities</p>
+            </span>
+            <div class="activities"></div>
+        </div>
+        <!-- Habit Form -->
+        <div id="habit-form-container" style="display:none;">
+            <form id="habit-form">
+                <h3>Input Habit which you wish to track over time</h3>
+                <div>
+                   <label for="icon">Habit Icon</label>
+                   <input type="file" name="icon" id="icon" accept="image/*">
+                </div>
+                
+                <div>
+                   <label for="startDate">Start Date</label>
+                   <input type="date" name="startDate" id="startDate"> 
+                </div>
+                
+                <div>
+                   <label for="trackingPeriod">Tracking Period (in days)</label>
+                   <input type="number" name="trackingPeriod" id="trackingPeriod" min="1"> 
+                </div>
+                
+                <div>
+                  <label for="habit">Habit</label>
+                  <input type="text" name="habit" placeholder="Input a habit">  
+                </div>
+                <input class="btn" type="submit" value="Insert">
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="./dist/app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
